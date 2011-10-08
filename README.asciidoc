@@ -1,0 +1,104 @@
+== 00:00:00
+Introductions
+
+== 00:01:00
+Give them the URL to download the slides. Encourage them to do so. footnote::[I could put these notes online, too]
+
+== 00:01:30
+Describe the Android hardware options:
+
+USB/Open Accessory/ADK:: The microcontroller, such as an Arduino, plays host to—and powers—the phone. Most widely supported. USB Host is not widely available, but opens up a whole lot of possibilities (and shouldn't require the device to power the phone). footnote::[add ADK to the slide and also explain the distinctions between USB, Open Accessory, ADK]
+NFC/RFID:: Can read and write MiFare RFID tags. 1k, 4k, 16k storage is common. I've got a bunch of tags. You can each have one or two. Can also exchange messages between devices, and can emulate a tag.
+Bluetooth:: Possibly the most flexible way to talk from something like Arduino to an Android phone (unlike the ADK, it's untethered). Very easy, too—it's just a serial connection. That's outside the scope of this presentation, but come see us in the Make booth for more info.
+Blinkenlights:: serial over light. footnote::[This is using that property of LEDs that Mims discovered, right?]
+IOIO board:: from SparkFun Electronics and Ytai Ben-Tsvi. Similar to (and predates) USB and Open Accessory.
+
+We'll demo each of these in a moment.
+
+== 00:04:00
+What we'll teach you in this session:
+
+The basics of Android development:: real quick hello world type intro because a few of you footnote::[double check spreadsheet] don't have Android dev experience.
+The basics of Arduino development:: A lot of you haven't done this before, and we'll take this a little slower footnote::[be sure you do!]
+Making Stuff with the ADK:: How to bridge the world of Arduino and Android. Sense and manipulate the physical world with your phone.
+
+== 00:04:30
+What you'll need to know: the usual. elementary programming skills for Arduino, more hardcore OO programming for Android.
+
+== 00:05:00
+On to the demos. We'll get into the code later.
+
+What we'll do with the ADK. Two key things:
+
+Control the Arduino with the Android phone:: turn on an LED footnote::[is this right?]. Same principle applies to motor and many other actuators.
+Make the phone respond to the real world:: Android phones have a lot of sensors. Arduino can connect them to a lot more.
+
+== 00:07:00
+Demo video: show off Tyler's project. Walk through the key bits:
+
+* Android app
+* Arduino connections
+* Sensors and actuators
+* Power supply making it work well
+
+== 00:10:00
+What we'll demonstrate with NFC:
+
+* Write something to a tag
+* Read something from a tag
+* Also mention:
+** Sending data between two phones
+** Emulating a tag
+
+== 00:11:30
+Demo video: show off NFC/RFID bits. Explain what happens at each point:
+
+* Writing data to a tag
+* Reading data from a tag
+* Different types of tags
+
+== 00:13:00
+Overview of the other options:
+
+* Bluetooth control
+* IOIO
+
+== 00:14:30
+Demo video: show off robot. Explain the following:
+
+* Pairing
+* Selection of device
+* Connection/disconnection
+* Explain the Arduino Pro Mini
+* How Arduino talks to the motors
+* How Arduino talks to Bluetooth
+* Where to buy the Bluetooth module
+* What you do in Bluetooth handler, how you update the robot's speed
+
+== 00:17:00
+Demo video: programming the Wayne and Layne LED grid. What just happened?
+
+* PIC microcontroller has a mode in which you can load strings over the LEDs
+* LEDs are light sensors as well as emitters
+* It's basically a serial protocol (clock+data)
+
+== 00:21:00
+Overview of what you need to do some of this stuff footnote::[give this slide a better title].
+
+* Android 2.3.4 or later for ADK
+* Nexus S for NFC footnote::[what about the new nexus?]
+* Arduino Mega ADK
+* Arduino Uno or similar
+* All kinds of sensors and actuators. An LED and a pushbutton are a good start.
+* RFID module for Arduino
+
+== 00:28:00
+Overview of the five projects in this session:
+
+* The hello, world of Arduino: blinking an LED
+* The basic Android Hello, World. If you know this stuff, feel free to take a break. 
+* Communicating from Arduino to Android and vice-versa
+* Reading and writing an RFID tag from Android
+* Creating a tag reader with Arduino and Processing (Processing is running on a computer)
+
+== 00:30:00
