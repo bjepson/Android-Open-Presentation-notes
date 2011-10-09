@@ -160,3 +160,9 @@ If you have trouble figuring out which serial port corresponds to your Arduino, 
 == Slide 28
 Let's look at the code.
 Arduino is simple: setup() is called once. loop() is called over and over again; until you unplug the Arduino, the world ends, etc.
+
+== Slide 29
+
+Now we'll quickly cover the basics of Android programming
+
+
