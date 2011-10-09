@@ -2,15 +2,17 @@
 Introductions
 
 == Slide 2
-Give them the URL to download the slides. Encourage them to do so. footnote::[I could put these notes online, too]
+Give them the URL to download the slides. Encourage them to do so. 
 
 == Slide 3
 Describe the Android hardware options:
 
-USB/Open Accessory/ADK:: The microcontroller, such as an Arduino, plays host to—and powers—the phone. Most widely supported. USB Host is not widely available, but opens up a whole lot of possibilities (and shouldn't require the device to power the phone). footnote::[add ADK to the slide and also explain the distinctions between USB, Open Accessory, ADK]
+USB/Open Accessory/ADK:: The microcontroller, such as an Arduino, plays host to—and powers—the phone. Most widely supported. USB Host is not widely available, but opens up a whole lot of possibilities (and shouldn't require the device to power the phone).
+* USB: the interface. Android is the peripheral, Arduino is the host. hence all the extra hardware on the board (and you're paying for a top-notch voltage regulator to keep the Arduino from overheating)
+* ADK: The Android Open Accessory Development Kit: Android APIs + a special Arduino board + Arduino libraries
 NFC/RFID:: Can read and write MiFare RFID tags. 1k, 4k, 16k storage is common. I've got a bunch of tags. You can each have one or two. Can also exchange messages between devices, and can emulate a tag.
 Bluetooth:: Possibly the most flexible way to talk from something like Arduino to an Android phone (unlike the ADK, it's untethered). Very easy, too—it's just a serial connection. That's outside the scope of this presentation, but come see us in the Make booth for more info.
-Blinkenlights:: serial over light. footnote::[This is using that property of LEDs that Mims discovered, right?]
+Blinkenlights:: serial over light. You program it over light sensors
 IOIO board:: from SparkFun Electronics and Ytai Ben-Tsvi. Similar to (and predates) USB and Open Accessory.
 
 We'll demo each of these in a moment.
@@ -18,7 +20,7 @@ We'll demo each of these in a moment.
 == Slide 4
 What we'll teach you in this session:
 
-The basics of Android development:: real quick hello world type intro because a few of you footnote::[double check spreadsheet] don't have Android dev experience.
+The basics of Android development:: real quick hello world type intro because a few of you don't have Android dev experience.
 The basics of Arduino development:: A lot of you haven't done this before, and we'll take this a little slower footnote::[be sure you do!]
 Making Stuff with the ADK:: How to bridge the world of Arduino and Android. Sense and manipulate the physical world with your phone.
 
@@ -29,7 +31,7 @@ What you already need to know: the usual. elementary programming skills for Ardu
 
 What we'll do with the ADK. Two key things:
 
-Control the Arduino with the Android phone:: turn on an LED footnote::[is this right?]. Same principle applies to motor and many other actuators.
+Control the Arduino with the Android phone:: turn on an LED footnote::[update this with Tyler's details]. Same principle applies to motor and many other actuators.
 Make the phone respond to the real world:: Android phones have a lot of sensors. Arduino can connect them to a lot more.
 
 == Slide 7
@@ -83,10 +85,10 @@ Demo video: programming the Wayne and Layne LED grid. What just happened?
 * It's basically a serial protocol (clock+data)
 
 == Slide 13
-Overview of what you need to do some of this stuff footnote::[give this slide a better title].
+Overview of what you need to do some of this stuff 
 
 * Android 2.3.4 or later for ADK
-** Nexus S is good for NFC footnote::[what about the new nexus?]
+** Nexus S is good for NFC at the moment.
 * Arduino Mega ADK
 * Arduino Uno or similar
 * All kinds of sensors and actuators. An LED and a pushbutton are a good start.
@@ -167,4 +169,22 @@ Now we'll quickly cover the basics of Android programming
 
 == Slide 30
 
-These steps are pretty straightforward. The only one that's slightly tricky is the last one: which Android SDK should you install? 
+These steps are pretty straightforward. The only one that's slightly tricky is the last one: which Android SDK should you install? For NFC, you'll need the Android 2.3 SDK. For the ADK+open accessory, you'll need 2.3.3 (level 10) plus the Google APIs API Level 10 add-on library.
+
+== Slide 31
+This is everything you need to run *this* demo. You will need several more things for the ADK examples, including Google APIs API Level 10 add-on library. You can do that one now or wait until later. We're going to wait until later.
+
+== Slide 32: Create an App
+This is going to be old hat for most of you. Well, at least for the most of you who replied to the survey we sent out to registered participants a few weeks ago.
+
+== Slide 33
+This is what your new project properties should look like
+
+== Slide 34
+And this is what your app will look like. Hey, let's actually fire the app up with Jens Riboe's http://blog.ribomation.com/droid-at-screen/ to show it.
+
+== Slide 35
+Let's look at the source of the TestAppActivity
+
+== Slide 36
+// wait until Tyler's slides are done to resume these
