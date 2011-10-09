@@ -165,4 +165,6 @@ Arduino is simple: setup() is called once. loop() is called over and over again;
 
 Now we'll quickly cover the basics of Android programming
 
+== Slide 30
 
+These steps are pretty straightforward. The only one that's slightly tricky is the last one: which Android SDK should you install? 
