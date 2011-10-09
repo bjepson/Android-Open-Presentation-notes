@@ -1,10 +1,10 @@
-== Slide {counter:slide:1}
+== Slide 1
 Introductions
 
-== Slide {counter:slide}
+== Slide 2
 Give them the URL to download the slides. Encourage them to do so. footnote::[I could put these notes online, too]
 
-== Slide {counter:slide}
+== Slide 3
 Describe the Android hardware options:
 
 USB/Open Accessory/ADK:: The microcontroller, such as an Arduino, plays host to—and powers—the phone. Most widely supported. USB Host is not widely available, but opens up a whole lot of possibilities (and shouldn't require the device to power the phone). footnote::[add ADK to the slide and also explain the distinctions between USB, Open Accessory, ADK]
@@ -15,24 +15,24 @@ IOIO board:: from SparkFun Electronics and Ytai Ben-Tsvi. Similar to (and predat
 
 We'll demo each of these in a moment.
 
-== Slide {counter:slide}
+== Slide 4
 What we'll teach you in this session:
 
 The basics of Android development:: real quick hello world type intro because a few of you footnote::[double check spreadsheet] don't have Android dev experience.
 The basics of Arduino development:: A lot of you haven't done this before, and we'll take this a little slower footnote::[be sure you do!]
 Making Stuff with the ADK:: How to bridge the world of Arduino and Android. Sense and manipulate the physical world with your phone.
 
-== Slide {counter:slide}
+== Slide 5
 What you already need to know: the usual. elementary programming skills for Arduino, more hardcore OO programming for Android. Let's move on to the demos. We'll get into the code later.
 
-== Slide {counter:slide}
+== Slide 6
 
 What we'll do with the ADK. Two key things:
 
 Control the Arduino with the Android phone:: turn on an LED footnote::[is this right?]. Same principle applies to motor and many other actuators.
 Make the phone respond to the real world:: Android phones have a lot of sensors. Arduino can connect them to a lot more.
 
-== 00:07:00
+== Slide 7
 Demo video: show off Tyler's project. Walk through the key bits:
 
 * Android app
@@ -40,7 +40,7 @@ Demo video: show off Tyler's project. Walk through the key bits:
 * Sensors and actuators
 * Power supply making it work well
 
-== 00:10:00
+== Slide 8
 What we'll demonstrate with NFC:
 
 * Write something to a tag
@@ -49,20 +49,21 @@ What we'll demonstrate with NFC:
 ** Sending data between two phones
 ** Emulating a tag
 
-== 00:11:30
+== Slide 9
 Demo video: show off NFC/RFID bits. Explain what happens at each point:
 
 * Writing data to a tag
 * Reading data from a tag
 * Different types of tags
 
-== 00:13:00
+== Slide 10
 Overview of the other options:
 
 * Bluetooth control
+* Blinkenlights
 * IOIO
 
-== 00:14:30
+== Slide 11
 Demo video: show off robot. Explain the following:
 
 * Pairing
@@ -74,24 +75,41 @@ Demo video: show off robot. Explain the following:
 * Where to buy the Bluetooth module
 * What you do in Bluetooth handler, how you update the robot's speed
 
-== 00:17:00
+== Slide 12
 Demo video: programming the Wayne and Layne LED grid. What just happened?
 
 * PIC microcontroller has a mode in which you can load strings over the LEDs
 * LEDs are light sensors as well as emitters
 * It's basically a serial protocol (clock+data)
 
-== 00:21:00
+== Slide 13
 Overview of what you need to do some of this stuff footnote::[give this slide a better title].
 
 * Android 2.3.4 or later for ADK
-* Nexus S for NFC footnote::[what about the new nexus?]
+** Nexus S is good for NFC footnote::[what about the new nexus?]
 * Arduino Mega ADK
 * Arduino Uno or similar
 * All kinds of sensors and actuators. An LED and a pushbutton are a good start.
 * RFID module for Arduino
 
-== 00:28:00
+Let's not turn these next few slides into a sales pitch!
+
+== Slide 14
+Nexus S
+
+== Slide 15
+Mega ADK
+
+== Slide 16
+Uno
+
+== Slide 17
+Components
+
+== Slide 18
+RFID module + breakout board
+
+== Slide 19
 Overview of the five projects in this session:
 
 * The hello, world of Arduino: blinking an LED
@@ -100,13 +118,13 @@ Overview of the five projects in this session:
 * Reading and writing an RFID tag from Android
 * Creating a tag reader with Arduino and Processing (Processing is running on a computer)
 
-== 00:30:00
+== Slide 20
 Which Arduino version? 0022 is the latest beta, and the most stable. 1.0 is in release candidate, and a lot of third party libraries haven't been updated yet. We'll use 0022
 
-== 00:32:00
+== Slide 21
 Project 1: let's blink an LED.
 
-== 00:34:00
+== Slide 22
 Required components:
 
 * An Arduino Uno, but any Arduino compatible, including the Mega ADK, is fine.
@@ -114,11 +132,11 @@ Required components:
 * A computer (to program the Arduino)
 * The Arduino software
 
-== 00:36:00
+== Slide 23
 
 Download the Arduino software
 
-== 00:36:30
+== Slide 24
 
 Install Arduino:
 
@@ -127,3 +145,18 @@ Install Arduino:
 * You don't need to install the driver package unless your Arduino is older than the Uno.
 * You will need to locate an .inf file in the Arduino\ directory on Windows when you plug the Arduino in for the first time.
 
+== Slide 25
+
+Wire it all up: this part is easy!
+
+== Slide 26
+A photo for good measure
+
+== Slide 27
+Run a sketch on the Arduino.
+
+If you have trouble figuring out which serial port corresponds to your Arduino, look at Tools->Serial Port _without_ the Arduino plugged in. Plug it in and look at it again. The one that wasn't there before is your Arduino.
+
+== Slide 28
+Let's look at the code.
+Arduino is simple: setup() is called once. loop() is called over and over again; until you unplug the Arduino, the world ends, etc.
