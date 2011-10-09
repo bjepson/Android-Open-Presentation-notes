@@ -1,10 +1,10 @@
-== 00:00:00
+== Slide {counter:slide:1}
 Introductions
 
-== 00:01:00
+== Slide {counter:slide}
 Give them the URL to download the slides. Encourage them to do so. footnote::[I could put these notes online, too]
 
-== 00:01:30
+== Slide {counter:slide}
 Describe the Android hardware options:
 
 USB/Open Accessory/ADK:: The microcontroller, such as an Arduino, plays host to—and powers—the phone. Most widely supported. USB Host is not widely available, but opens up a whole lot of possibilities (and shouldn't require the device to power the phone). footnote::[add ADK to the slide and also explain the distinctions between USB, Open Accessory, ADK]
@@ -15,18 +15,17 @@ IOIO board:: from SparkFun Electronics and Ytai Ben-Tsvi. Similar to (and predat
 
 We'll demo each of these in a moment.
 
-== 00:04:00
+== Slide {counter:slide}
 What we'll teach you in this session:
 
 The basics of Android development:: real quick hello world type intro because a few of you footnote::[double check spreadsheet] don't have Android dev experience.
 The basics of Arduino development:: A lot of you haven't done this before, and we'll take this a little slower footnote::[be sure you do!]
 Making Stuff with the ADK:: How to bridge the world of Arduino and Android. Sense and manipulate the physical world with your phone.
 
-== 00:04:30
-What you'll need to know: the usual. elementary programming skills for Arduino, more hardcore OO programming for Android.
+== Slide {counter:slide}
+What you already need to know: the usual. elementary programming skills for Arduino, more hardcore OO programming for Android. Let's move on to the demos. We'll get into the code later.
 
-== 00:05:00
-On to the demos. We'll get into the code later.
+== Slide {counter:slide}
 
 What we'll do with the ADK. Two key things:
 
@@ -102,3 +101,29 @@ Overview of the five projects in this session:
 * Creating a tag reader with Arduino and Processing (Processing is running on a computer)
 
 == 00:30:00
+Which Arduino version? 0022 is the latest beta, and the most stable. 1.0 is in release candidate, and a lot of third party libraries haven't been updated yet. We'll use 0022
+
+== 00:32:00
+Project 1: let's blink an LED.
+
+== 00:34:00
+Required components:
+
+* An Arduino Uno, but any Arduino compatible, including the Mega ADK, is fine.
+* A USB A-B cable—the one you got with every printer you've ever bought
+* A computer (to program the Arduino)
+* The Arduino software
+
+== 00:36:00
+
+Download the Arduino software
+
+== 00:36:30
+
+Install Arduino:
+
+* On the Mac, drag the app to /Applications
+* On Windows/Linux, put it where you want it.
+* You don't need to install the driver package unless your Arduino is older than the Uno.
+* You will need to locate an .inf file in the Arduino\ directory on Windows when you plug the Arduino in for the first time.
+
